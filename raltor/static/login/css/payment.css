@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:25px;
+  min-height: 100vh;
+  background-color: #CBE9FE;
+ 
+}
+
+.container form{
+  padding:20px;
+  width:700px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  position: relative;
+  top: 30px; 
+  border-radius: 20px;
+}
+
+.container form .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap:15px;
+}
+
+.container form .row .col{
+  flex:1 1 250px;
+}
+
+.container form .row .col .title{
+  font-size: 20px;
+  color:#333;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.container form .row .col .inputBox{
+  margin:15px 0;
+}
+
+.container form .row .col .inputBox span{
+  margin-bottom: 10px;
+  display: block;
+}
+
+.container form .row .col .inputBox input{
+  width: 100%;
+  border:1px solid #ccc;
+  padding:10px 15px;
+  font-size: 15px;
+  text-transform: none;
+}
+
+.container form .row .col .inputBox input:focus{
+  border:1px solid #000;
+}
+
+.container form .row .col .flex{
+  display: flex;
+  gap:15px;
+}
+
+.container form .row .col .flex .inputBox{
+  margin-top: 5px;
+}
+
+.container form .row .col .inputBox img{
+  height: 34px;
+  margin-top: 5px;
+  filter: drop-shadow(0 0 1px #000);
+}
+
+.container form .submit-btn{
+  width: 100%;
+  padding:12px;
+  font-size: 17px;
+  background: #2691D9;
+  color:#fff;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.container form .submit-btn:hover{
+  background: #6b7884;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    font-style: normal;
+    /* height: 300vh; */
+    Font-family: Poppins;
+    background-color: #CBE9FE;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.content {
+    margin: 0 10vw;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+li {
+    margin: 0 41px;
+}
+
+.ogbtn {
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: auto;
+    display: flex;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* ------------------------------------------------------------------------------------end of og------------------------------------------------------------------------------------------------- */
+
+
+/* ------------------------------------------------------------------------------------header------------------------------------------------------------------------------------------------- */
+.pos{
+    
+    margin: 10px;
+    
+}
+.links{
+    margin: 10px;
+    padding: 10px;
+}
+.activated>a {
+    font-weight: 700 !important;
+}
+
+.links ul li a {
+    position: relative;
+    font-size: 21px;
+    font-weight: 200;
+}
+
+.logo h3 {
+    margin-left: 1rem;
+}
+
+.links ul li a::after {
+    content: ' ';
+    background-color: #2691D9;
+    position: absolute;
+    width: 0;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    display: block;
+    bottom: -7px;
+    height: 2px;
+    left: 50%;
+}
+
+.links ul li a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.head {
+    z-index: 100;
+    position: fixed;
+    width: 100vw;
+    background-color: #2691D9;
+}
+
+.header {
+    margin-top: 15px;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    width: 30%;
+}
+
+.sign-btns {
+    display: flex;
+    width: 300px;
+    gap: 6px;
+}
+
+.sign-up {
+    background: white;
+    width: 133px;
+    height: 40px;
+    transition: .5s;
+}
+
+.sign-up:hover {
+    background-color: #0D4C76;
+}
+
+.sign-up:hover a {
+    color: white;
+}
+
+.sign-up a {
+    color: #0D4C76;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.sign-in {
+    width: 133px;
+    height: 40px;
+    background: #0D4C76;
+    transition: 0.5s;
+}
+
+.sign-in:hover {
+    background-color: #9aa2a7;
+}
+
+.sign-in a {
+    color: #E7D3D3;
+    font-weight: lighter;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 24px;
+    transition: 1.5;
+}
+
+.sign-in:hover a {
+    color: white;
+}

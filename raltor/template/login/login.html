@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{%static 'login/css/login.css' %}">
+    <link rel="icon" href="{%static 'login/images/icon.png' %}">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="head">
+            <div class="header content">
+                <div class="logo ">
+                    <div class="logo-icon">
+                        <a href="{%url 'users:home' rs2 %}"><img src="{%static 'login/images/logo.png' %}" alt=""></a>
+                    </div>{% for message in messages %}
+                    <h3>{{ message }}</h3>
+                    {% endfor %}
+                </div>
+                <div class="links">
+                    <ul class="pos">
+                        <li class="activated">
+                            <a href="{%url 'users:home' rs2 %}">Home</a>
+                        </li>
+                        <li>
+                            <a href="#ourservice">Services</a>
+                        </li>
+                        <li>
+                            <a href="{%url 'users:addproduct' %}">upload</a>
+                        </li>
+                        <li>
+                            <a href="{%url 'users:contactus' %}">ContactUS</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sign-btns">
+                    <div class="sign-in ogbtn">
+                        <a href="{%url 'users:login' %}">sign in</a> </div>
+                    <div class="sign-up ogbtn">
+                        <a href="{%url 'users:signup' %}">sign-up</a> </div>
+                </div>
+            </div>
+        </div></div>
+    <div class="container">
+        <div class="signin-signup">
+
+            <form method="POST" class="sign-in-form">
+             {% csrf_token %}
+                <h2 class="title">Sign in</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Username"name="Username" required>
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password"name="Password" required>
+                </div>
+                <input type="submit" value="Login" class="btn">
+                <p class="social-text">Or Sign in with social platform</p>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/realtor.com" class="social-icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com/realtordotcom?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+               
+                </div>
+                <p class="account-text">Don't have an account? <a href="{%url 'users:signup' %}" id="sign-up-btn2">Sign up</a></p>
+            </form>
+        <form method="POST">
+            {% csrf_token %}
+            <form class="sign-up-form">
+                   
+                <h2 class="title">Sign up</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Username1" name="user_name">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="email" required="required">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" name="password">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-phone"></i>
+                    <input type="text" placeholder="phonenumber"name="mobilenumber">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-home"></i>
+                    <input type="text" placeholder="address"name="address">
+                </div>
+                <input type="submit" value="Sign up" class="btn">
+                
+                 
+                <p class="social-text">Or Sign in with social platform</p>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/realtor.com" class="social-icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com/realtordotcom?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                   
+                </div>
+                <p class="account-text">Already have an account? <a href="{%url 'users:login' %}" id="sign-in-btn2">Sign in</a></p>
+            </form>
+        </form>
+        </div>
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>Welcome Back</h3>
+                    <p>to keep connected with us please Enter your information </p>
+                    <a href="{%url 'users:login' %}"> <button class="btn" id="sign-in-btn">Sign in</button></a>
+                </div>
+                <img src="{%static 'login/images/logo.png' %}" alt="" class="image">
+            </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>Hello dear Customer</h3>
+                    <p>Enter your personal details and start journey with us </p>
+                    <button class="btn" id="sign-up-btn">Sign up</button>
+                </div>
+                <img src="{%static 'login/images/png-transparent-house-home-modern-luxury-architecture-building-residential-real-estate-exterior-facade-removebg-preview.png' %}" alt="" class="image">
+            </div>
+        </div>
+    </div>
+
+    <script src="{%static 'login/js/app.js' %}"></script>
+</body>
+
+</html>

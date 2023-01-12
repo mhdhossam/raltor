@@ -1,0 +1,252 @@
+
+   <!DOCTYPE html>
+   <html lang="en">
+    {% load static %}
+   <head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Admin page</title>
+       <link rel="stylesheet" href="{%static 'login/css/admin-page.css' %}">
+       <!--------------------------------------------- Start Google Fonts ------------------------------------------->
+       <link rel="preconnect" href="https://fonts.googleapis.com" />
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+       <link
+         href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;900&family=Josefin+Sans:wght@300&family=Open+Sans:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,400;0,600;0,800;1,200;1,300;1,400;1,500&display=swap"
+         rel="stylesheet"
+       />
+       <!--------------------------------------------------Ends Google Fonts ----------------------------------------->
+       <!-- -----------------------------------------------Start icon aosem ------------------------------------------>
+       <link rel="icon" href="{%static 'login/images/icon.png' %}" />
+       <link rel="stylesheet" href="{%static 'login/fontawesome-free-6.2.0-web/css/all.css' %}" />
+       <!-------------------------------------------------- End icon aosem----------------------------------------- -->
+   </head>
+   <body>
+        <!-- -----------------------------------------------start nav bar------------------------------------------- -->
+        <div class="body">
+           <div class="head">
+             <div class="header content">
+               <div class="logo">
+                 <div class="logo-icon">
+                   <a href="{%url 'users:home' %}"><img src="{%static 'login/images/logo.png' %}" alt="" /></a>
+                 </div>
+                 <h3 class="admin">Admin home page </h3>
+               
+               
+              
+             </div>
+           </div>
+           </div>
+   <!-- --------------------------------------------------end nav bar --------------------------------------- -->
+    
+   <!-- --------------------------------------------------left-side --------------------------------------- -->
+   <div class="back-left">
+   
+     
+   
+   <div onclick="myFunction()" class="upload-con">
+     <p>uploaded Request</p>
+   </div>
+   
+   <a href="{%url 'admins:chatadmin' %}"><div class="massg-con">
+     <p>Message Request</p>  
+   </div></a>
+   
+     <div class="add-con">
+     <p>logout</p>
+   </div>
+   
+   
+   
+   </div>
+   
+   <div id="myDIV">
+    <div class="center">
+      <table>
+        <tr>
+          <td>
+            <div class="cardss">
+              <a href="{%url 'users:comingsoon' %}">
+                <div class="imagess-1">
+                  <img class="imagess-1" src="{%static 'login/images/1.jpg' %}" alt="" />
+                </div>
+                <div class="one-head">
+                  North Coast
+                  <span>soon</span>
+                </div>
+                <div class="two-head">
+                  <i class="fa-solid fa-street-view"></i> Street90
+                  <div class="btn">For Rent</div>
+                </div>
+              </a>
+              <div class="three-head">
+                <i class="fa-solid fa-bed"></i>
+                <span class="badrooms">3</span>
+                <i class="fa-solid fa-sink"></i>
+                <span class="badrooms">2</span>
+                <i class="fa-solid fa-chart-area"></i>
+                <span class="badrooms">250m</span>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="btnn">accept</div>
+            <div class="btnn-2"><a href="">Reject</a></div>
+          </td>
+        </tr>
+  
+        <tr>
+          <td>
+            <div class="cardss">
+              <a href="{%url 'users:comingsoon' %}">
+                <div class="imagess-1">
+                  <img class="imagess-1" src="{%static 'login/images/1.jpg' %}" alt="" />
+                </div>
+                <div class="one-head">
+                  North Coast
+                  <span>soon</span>
+                </div>
+                <div class="two-head">
+                  <i class="fa-solid fa-street-view"></i> Street90
+                  <div class="btn">For Rent</div>
+                </div>
+              </a>
+              <div class="three-head">
+                <i class="fa-solid fa-bed"></i>
+                <span class="badrooms">3</span>
+                <i class="fa-solid fa-sink"></i>
+                <span class="badrooms">2</span>
+                <i class="fa-solid fa-chart-area"></i>
+                <span class="badrooms">250m</span>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="btnn">accept</div>
+            <div class="btnn-2"><a href="">Reject</a></div>
+          </td>
+        </tr>
+  
+        <tr>
+          <td>
+            <div class="cardss">
+              <a href="{%url 'users:comingsoon' %}">
+                <div class="imagess-1">
+                  <img class="imagess-1" src="{%static 'login/images/1.jpg' %}" alt="" />
+                </div>
+                <div class="one-head">
+                  North Coast
+                  <span>soon</span>
+                </div>
+                <div class="two-head">
+                  <i class="fa-solid fa-street-view"></i> Street90
+                  <div class="btn">For Rent</div>
+                </div>
+              </a>
+              <div class="three-head">
+                <i class="fa-solid fa-bed"></i>
+                <span class="badrooms">3</span>
+                <i class="fa-solid fa-sink"></i>
+                <span class="badrooms">2</span>
+                <i class="fa-solid fa-chart-area"></i>
+                <span class="badrooms">250m</span>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="btnn">accept</div>
+            <div class="btnn-2"><a href="">Reject</a></div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+   
+   
+   
+   
+   
+   
+   
+   
+   </div>
+   </body>
+   </html>
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

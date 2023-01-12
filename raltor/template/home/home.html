@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{%static 'login/css/home.css' %}" />
+    <title>Realtor</title>
+    <!--------------------------------------------- Start Google Fonts ------------------------------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;900&family=Josefin+Sans:wght@300&family=Open+Sans:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,400;0,600;0,800;1,200;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <!--------------------------------------------------Ends Google Fonts ----------------------------------------->
+    <!-- -----------------------------------------------Start icon aosem ------------------------------------------>
+    <link rel="icon" href="{%static 'login/images/icon.png' %}" />
+    <link rel="stylesheet" href="{%static 'login/fontawesome-free-6.2.0-web/css/all.css' %}" />
+    <!-------------------------------------------------- End icon aosem----------------------------------------- -->
+  </head>
+
+  <body>
+    <!-- -----------------------------------------------start nav bar------------------------------------------- -->
+    <div class="body">
+      <div class="head">
+        <div class="header content">
+          <div class="logo">
+            <div class="logo-icon">
+              <a href="{%url 'users:home' rs2 %}"><img src="{%static 'login/images/logo.png' %}" alt="" /></a>
+            </div>
+            <h3></h3>
+          </div>
+          <div class="links">
+            <ul class="pos">
+              <li class="activated">
+                <a href="{%url 'users:home' rs2 %}">Home</a>
+              </li>
+              <li>
+                <a href="#ourservice">Services</a>
+              </li>
+              <li>
+                <a href="{%url 'users:addproduct' %}">upload</a>
+              </li>
+              <li>
+                <a href="{%url 'users:contactus' %}">ContactUS</a>
+              </li>
+            </ul>
+          </div>
+          {% if rs2 %}
+          <div class="sign-btns">
+            <div class="sign-in ogbtn">
+              <a href="{%url 'users:profileuser' rs2 %}">profile</a>
+            </div>
+          </div>
+          {% else %}
+          <div class="sign-btns">
+            <div class="sign-in ogbtn">
+              <a href="{%url 'users:login' %}">sign in</a>
+            </div>
+            <div class="sign-up ogbtn">
+              <a href="{%url 'users:signup' %}">sign-up</a>
+            </div>
+          </div>
+          {% endif%}
+        </div>
+      </div>
+      <!-- --------------------------------------------------end nav bar --------------------------------------- -->
+
+
+      <!----------------------------------------------------banner start ------------------------------------------>
+      <div class="banner">
+        <div class="content headwords">
+          <h1>Help Find Your<br />Dream Home</h1>
+          <p>
+            <b> Realtor</b> is here to find the best home for you,<br />
+            for sale or for rent with a trusted source
+          </p>
+          <div class="ogbtn find-home"><a href="">Find Home</a></div>
+          <div class="arrow"></div>
+        </div>
+        <img class="img-accsent" src="{%static 'login/images/photo/Accsent 1.png' %}" alt="" />
+        <img class="img-hero" src="{%static 'login/images/Hero Image.png' %}" alt="" />
+      </div>
+      <!--------------------------------------------------------- Start Our Service ------------------------------>
+      <p id="ourservice"></p>
+      <div class="Our-Service">
+        <div class="content">
+          
+          <h2 class="special-heading"><span class="spn">Our</span>Service</h2>
+          <p>
+            The Realtor is here to find the best home for you, for sale or for
+            rent with a trusted source
+          </p>
+          <div class="Service-contant">
+
+            <a href="{%url 'users:comingsoon' %}">
+              <div class="cardss">
+              <div class="images">
+                <img src="{%static 'login/images/Icon-propertybaru.png' %}" alt="" />
+              </div>
+              <div class="info">
+                <h3 class="heading">New Feature</h3>
+                <p> Realtor is now a reality,buy it New home with bestfacilities
+                  With a comfortable environment.</p>
+              </div>
+            </div></a>
+
+            <a href="{%url 'appartments:appartments' %}">
+
+              <div class="cardss">
+                <div class="images">
+                  <img src="{%static 'login/images/Icon Sewa.png' %}" alt="" />
+                </div>
+                <div class="info">
+                  <h3 class="heading">Rent a House</h3>
+                  <p>
+                    Beautiful house rental for familyYou are the best choice for
+                    the placeStay with your family..
+                  </p>
+                </div>
+              </div></a>
+
+            <a href=""><div class="cardss">
+              <div class="images">
+                <img src="{%static 'login/images/Icon Beli.png' %}" alt="" />
+              </div>
+              <div class="info">
+                <h3 class="heading">Buying a Home</h3>
+                <p>
+                  Buy the perfect home at a price Best quality guaranteed from
+                  the sourcetrusted,
+                </p>
+              </div>
+            </div>
+          </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!------------------------------------------------------End Our Service -->
+    <!-- start of find home -->
+    <div class="main-home">
+      <div class="content">
+        <div class="head-text">
+          <h1>Find Your Home</h1>
+          <p>
+            Now you can save all your stress, time and money <br />
+            Hidden, with hundreds of homes for you
+          </p>
+          
+        </div>
+        
+      </div>
+    </div>
+    <!---------------------------------------------------------------- end of find home ---------------------------------------------------------------->
+    
+    
+    
+    <!-- /* ------------------------------------------------------start Our featured listing------------------------------------------------------------------------ */ -->
+
+    <div class="Our-featured-listing">
+      <div class="content">
+        <div class="special-heading">
+          <h3><span class="heading">Our</span> Featured listing</h3>
+        </div>
+        <div class="featured-contant">
+          <div class="cards">
+<!------------------------------------------------------------- al card al awlanhy fy al cooming soon ----------------------- ---------------------->
+<a href="{%url 'users:comingsoon' %}">
+  
+  <div class="images-1 imagess">
+  <!-- <img src="images/1.jpg" alt=""> -->
+</div>
+<div class="one-head">
+  North Coast
+  <span>soon</span>
+</div>
+<div class="two-head images">
+  <i class="fa-solid fa-street-view"></i> Street90
+  <div class="btn">For sale</div>
+</div>
+
+</a>
+<div class="three-head">
+  <i class="fa-solid fa-bed"></i>
+  <span class="badrooms">3</span>
+  <i class="fa-solid fa-sink"></i>
+  <span class="badrooms">2</span>
+  <i class="fa-solid fa-chart-area"></i>
+  <span class="badrooms">250m</span>
+</div>
+ </div>
+ <!-- ---------------------------------------------------------------nhayt al cart al awl fy al cooming soon------------------------------------------- -->
+
+<!-- ---------------------------------------------------------------bdayt al cart al al tany fy al cooming soon------------------------------------------- -->
+ <div class="cards">
+            
+  <a href="{%url 'users:comingsoon' %}">
+    <div class="images-2 imagess">
+      <!-- <img src="images/2.jpg" alt=""> -->
+    </div>
+    <div class="one-head">
+      North Coast
+      <span>soon</span>
+    </div>
+    <div class="two-head">
+      <i class="fa-solid fa-street-view"></i> Street90
+      <div class="btn">For Rent</div>
+    </div>
+  </a>
+            <div class="three-head">
+              <i class="fa-solid fa-bed"></i>
+              <span class="badrooms">3</span>
+              <i class="fa-solid fa-sink"></i>
+              <span class="badrooms">2</span>
+              <i class="fa-solid fa-chart-area"></i>
+              <span class="badrooms">250m</span>
+            </div>
+          </div>
+ <!-- ---------------------------------------------------------------nhayt al cart al altany fy al cooming soon------------------------------------------- -->
+
+  <!-- ---------------------------------------------------------------bdayt al cart al altalt fy al cooming soon------------------------------------------- -->
+
+          <div class="cards">
+            <a href="{%url 'users:comingsoon' %}">
+
+              <div class="images-3 imagess">
+                <!-- <img src="images/3.jpg" alt=""> -->
+              </div>
+              <div class="one-head">
+                North Coast
+                <span>soon</span>
+              </div>
+              <div class="two-head">
+                <i class="fa-solid fa-street-view"></i> Street90
+                <div class="btn">For sale</div>
+              </div>
+            </a>
+
+
+            <div class="three-head">
+              <i class="fa-solid fa-bed"></i>
+              <span class="badrooms">3</span>
+              <i class="fa-solid fa-sink"></i>
+              <span class="badrooms">2</span>
+              <i class="fa-solid fa-chart-area"></i>
+              <span class="badrooms">250m</span>
+            </div>
+          </div>
+<!-- ---------------------------------------------------------------nhayt al cart al altalt  fy al cooming soon------------------------------------------- -->
+
+ <!-- ---------------------------------------------------------------bdayt al cart al alrab3 fy al cooming soon------------------------------------------- -->
+
+          <div class="cards">
+            <a href="{%url 'users:comingsoon' %}">
+              <div class="images-4 imagess">
+                <!-- <img src="images/4.jpg" alt=""> -->
+              </div>
+              <div class="one-head">
+                North Coast
+                <span>soon</span>
+              </div>
+              <div class="two-head">
+                <i class="fa-solid fa-street-view"></i> Street90
+                <div class="btn">For sale</div>
+              </div>
+
+            </a>
+            <div class="three-head">
+              <i class="fa-solid fa-bed"></i>
+              <span class="badrooms">3</span>
+              <i class="fa-solid fa-sink"></i>
+              <span class="badrooms">2</span>
+              <i class="fa-solid fa-chart-area"></i>
+              <span class="badrooms">250m</span>
+            </div>
+          </div>
+<!-- ---------------------------------------------------------------nhayt al cart al alrab3 fy al cooming soon------------------------------------------- -->
+
+<!-- ---------------------------------------------------------------bdayt  al cart al 5ams fy al cooming soon------------------------------------------- -->
+
+
+          <div class="cards">
+            <a href="{%url 'users:comingsoon' %}">
+              <div class="images-5 imagess">
+                <!-- <img src="images/5.jpg" alt=""> -->
+              </div>
+              <div class="one-head">
+                North Coast
+                <span>soon</span>
+              </div>
+              <div class="two-head">
+                <i class="fa-solid fa-street-view"></i> Street90
+                <div class="btn">For Rent</div>
+            </a>
+            </div>
+            <div class="three-head">
+              <i class="fa-solid fa-bed"></i>
+              <span class="badrooms">3</span>
+              <i class="fa-solid fa-sink"></i>
+              <span class="badrooms">2</span>
+              <i class="fa-solid fa-chart-area"></i>
+              <span class="badrooms">250m</span>
+            </div>
+          </div>
+
+ <!-- ---------------------------------------------------------------mhayt al cart al al 5ams fy al cooming soon------------------------------------------- -->
+
+ <!-- ---------------------------------------------------------------bdayt al cart al al sads fy al cooming soon------------------------------------------- -->
+
+          <div class="cards">
+            <a href="{%url 'users:comingsoon' %}">
+              <div class="images-6 imagess">
+                <!-- <img src="images/6.jpg" alt=""> -->
+              </div>
+              <div class="one-head">
+                North Coast
+                <span>soon</span>
+              </div>
+              <div class="two-head">
+                <i class="fa-solid fa-street-view"></i> Street90
+                <div class="btn">For sale</div>
+              </div>
+
+
+            </a>
+            <div class="three-head">
+              <i class="fa-solid fa-bed"></i>
+              <span class="badrooms">3</span>
+              <i class="fa-solid fa-sink"></i>
+              <span class="badrooms">2</span>
+              <i class="fa-solid fa-chart-area"></i>
+              <span class="badrooms">250m</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+ <!-- ---------------------------------------------------------------nhayt al cart al sads fy al cooming soon------------------------------------------- -->
+
+    <!-- /* ------------------------------------------------------end Our featured listing------------------------------------------------------------------------ */ -->
+    <!-- gallery section starts  -->
+    <div class="home-features">
+      <h1></h1>
+    </div>
+    <!-- -----------------------------------------------------------------footer------------------------------------------ -->
+    <div class="footer">
+      <img class="endphoto" src="{%static 'login/images/Rectangle 50.jpg' %}" alt="">
+      <p class="footer-word">Need advice..?
+         Please contact us We are ready to help</p>
+         <br><p class="footer-word2">contact</p>
+         <div class="img-in-footer">
+          <img src="{%static 'login/images/Group-1.png' %}" alt=""><br><br>
+          <img src="{%static 'login/images/Vector.png' %}" alt=""><br><br>
+          <img src="{%static 'login/images/Group.png' %}" alt=""></div>
+          <div class="contact-footer">
+            <p>Ninety Street in the Fifth Settlement</p><br><br>
+            <p>Realtor@gmail.com</p><br><br>
+            <p>0101870958 - 011XXXXXXXX</p>
+          </div>
+      <div class="logo-footer"><a href="{%url 'users:home' rs2 %}"><img class="img-logo-fotter" src="{%static 'login/images/logo.png' %}" alt=""></a>
+        <div cl>
+          <div class="links-in-footer">
+        <div class="links">
+          <ul class="pos">
+            <li class="activated">
+              <a href="{%url 'users:home' rs2 %}">Home</a>
+            </li>
+            <li>
+              <a class="t7t-services" href="#ourservice">Services</a>
+            </li>
+            <li>
+              <a href="{%url 'users:addproduct' %}">upload</a>
+            </li>
+            <li>
+              <a href="{%url 'users:contactus' %}">ContactUS</a>
+            </li>
+          </ul>
+        </div>
+        </div>
+        <div class="botton-in-footer">
+        <div class="sign-btns">
+          <div class="sign-in ogbtn">
+            <a href="{%url 'users:login' %}">sign in</a>
+          </div>
+          <div class="sign-up ogbtn">
+            <a href="{%url 'users:signup' %}">sign-up</a>
+          </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    <div class="ask-q">
+      <p class="ask">Any Qustion..?</p>
+     <form method="POST">
+        {% csrf_token %}
+       <input class="ask-box" type="text" placeholder="Enter Email">
+       <br>
+       <input class="ask-box" type="text" placeholder="Your Qustion">
+       <input class="ask-btn" type="submit" value="Send">
+      </form>
+    </div>
+    </div>
+    
+  </body>
+</html>

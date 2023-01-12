@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <title>apprtments-city</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{%static '/css/apprtments-1.css' %}" />
+    <title>Realtor</title>
+    <!-- Start Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;900&family=Josefin+Sans:wght@300&family=Open+Sans:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,400;0,600;0,800;1,200;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <!--Ends Google Fonts -->
+    <!-- Start icon aosem -->
+    <link rel="icon" href="{%static '/images/icon.png' %}" />
+    <link rel="stylesheet" href="{%static '/fontawesome-free-6.2.0-web/css/all.css' %}" />
+    <!-- End icon aosem -->
+  </head>
+  <body>
+    <!--------------------------------------------------start nav bar ------------------------------------------>
+    <form method='POST'>
+    <div>
+      <div class="body">
+        <div class="head">
+          <div class="header content">
+            <div class="logo">
+              <div class="logo-icon">
+                <a href="./home.html"
+                  ><img src="{%static 'login/images/logo.png' %}" alt=""
+                /></a>
+              </div>
+              <h3></h3>
+            </div>
+            <div class="links">
+              <ul class="pos">
+                <li class="activated">
+                  <a href="{%url 'users:home' rs2 %}">Home</a>
+                </li>
+                <li>
+                  <a href="{%url 'users:home' rs2 %}">Services</a>
+                </li>
+                <li>
+                  <a href="{%url 'users:addproduct' %}">upload</a>
+                </li>
+                <li>
+                  <a href="{%url 'users:contactus' %}">ContactUS</a>
+                </li>
+              </ul>
+            </div>
+            <div class="sign-btns">
+              <div class="sign-in ogbtn">
+                <a href="{%url 'users:login' %}">sign in</a>
+              </div>
+              <div class="sign-up ogbtn">
+                <a href="{%url 'users:login' %}">sign-up</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+<div class="continer">
+  <aside >
+    <nav class="first-nav">
+      <p>Price Range</p>
+      <div class="box">
+        <select>
+          <option>100,000,000</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+          <option>Option 4</option>
+          <option>Option 5</option>
+        </select>
+      </div>
+      
+    </nav>
+    <div class="second-nav">
+    <p>location</p>
+    <div class="box-2"> 
+      <select name="" id="">
+        <option>Nasr city</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+        <option>Option 4</option>
+        <option>Option 5</option>
+      </select>
+      </select>
+    </div>
+    </div>
+    </nav>
+    <nav class="third-nav">
+      <p>Type</p>
+      <div class="box-3">
+      <select>
+        <option value="">appartment </option>
+        <option value="">Your type</option>
+        <option value="">vecation</option>
+        <option value="">appartment </option>
+        <option value="">medical</option>
+        <option value="">economing </option>
+      </select></div>
+    </nav>
+  <div class="big-cont">
+  <main class="main-icons" >
+    {% for house in rs %} 
+    
+      <a href="{%url 'appartments:appartmentcity' house.slug %}"><img src="{{house.image.url}}" alt=" "/> <h1 style="color:#0D4C76; text-align:center; ">{{house.location}}</h1></a>
+       {% endfor %} 
+       {% comment %} <a href="./apprtments-city.html"><img src="{%static '/images/p2.png' %}" alt=" "/> <h1 style="color:#0D4C76; text-align:center; "> The fifth statlment</h1></a>
+      <a href="./apprtments-city.html"><img src="{%static '/images/p3.png' %}" alt=" "/> <h1 style="color:#0D4C76; text-align:center; ">North cost</h1></a>
+    <a href="./apprtments-city.html"><img src="{%static '/images/p4.png' %}"alt=" "/> <h1 style="color:#0D4C76; text-align:center; "> Madinty</h1></a>
+    <a href="./apprtments-city.html"><img src="{%static '/images/p5.png' %}"alt=" "/> <h1 style="color:#0D4C76; text-align:center; "> Elshrouk</h1></a>
+    <a href="./apprtments-city.html"><img src="{%static '/images/p6.png' %}"alt=" "/> <h1 style="color:#0D4C76; text-align:center; "> Elshikh zayed</h1></a>
+  <a href="./apprtments-city.html"><img src="{%static '/images/p7.png' %}"alt=" "/> <h1 style="color:#0D4C76; text-align:center; "> uptown cairo</h1></a>
+  <a href="./apprtments-city.html"><img src="{%static '/images/p8.png' %}"alt=" "/> <h1 style="color:#0D4C76; text-align:center; "> Madei</h1></a>
+  <a href="./apprtments-city.html"><img src="{%static '/images/p9.png' %}"alt=" "/> <h1 style="color:#0D4C76; text-align:center; "> ElRehab</h1></a>  {% endcomment %}
+
+  </main></div>
+     
+ <main id="ssss">
+    <div class="imge-container">
+      <div class="imgessss">
+        <div class="thumbnail">
+
+        </div>
+        <div class="tetails">
+           <div class="imge-title">
+
+           </div> 
+        </div>
+
+      </div>
+    </div>
+  </main>
+</form>
+  </body>
+</html>
+
+  <table class="first-table">
+    <tr>
+    </tr>
+  </table>
+  <table class="second-table">
+    <tr>
+
+    </tr>
+  </table>
+  <table class="third-table">
+    <tr>
+    </tr>
+  </table>

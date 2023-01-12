@@ -1,0 +1,752 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    font-style: normal;
+    /* height: 300vh; */
+    Font-family: 'Poppins';
+    background-color: #CBE9FE;
+}
+/*-------------------------------------------------------- start nav bar------------------------------ */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.content {
+    margin: 0 10vw;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+li {
+    margin: 0 41px;
+}
+
+.ogbtn {
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: auto;
+    display: flex;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+}
+
+.pos{
+    
+    margin: 10px;
+    
+}
+.links{
+    margin: 10px;
+    padding: 10px;
+}
+.activated>a {
+    font-weight: 700 !important;
+}
+
+.links ul li a {
+    position: relative;
+    font-size: 21px;
+    font-weight: 200;
+}
+
+.logo h3 {
+    margin-left: 1rem;
+}
+
+.links ul li a::after {
+    content: ' ';
+    background-color: #2691D9;
+    position: absolute;
+    width: 0;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    display: block;
+    bottom: -7px;
+    height: 2px;
+    left: 50%;
+}
+
+.links ul li a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.head {
+    z-index: 100;
+    position: fixed;
+    width: 100vw;
+    background-color: #2691D9;
+}
+
+.header {
+    margin-top: 15px;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    width: 30%;
+}
+
+.sign-btns {
+    display: flex;
+    width: 300px;
+    gap: 6px;
+}
+
+.sign-up {
+    background: white;
+    width: 133px;
+    height: 40px;
+    transition: .5s;
+}
+
+.sign-up:hover {
+    background-color: #0D4C76;
+}
+
+.sign-up:hover a {
+    color: white;
+}
+
+.sign-up a {
+    color: #0D4C76;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.sign-in {
+    width: 133px;
+    height: 40px;
+    background: #0D4C76;
+    transition: 0.5s;
+}
+
+.sign-in:hover {
+    background-color: #9aa2a7;
+}
+
+.sign-in a {
+    color: #E7D3D3;
+    font-weight: lighter;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 24px;
+    transition: 1.5;
+}
+
+.sign-in:hover a {
+    color: white;
+}
+
+
+/* --------------------------------------------------------------------------end nav bar--------------------------------------------------------------------------------------------------- */
+
+
+/* --------------------------------------------------------------------------banner--------------------------------------------------------------------------------------------------- */
+
+.banner {
+    background-color: #2691D9;
+    background-image: linear-gradient(to bottom right,#2691D9);
+    height: 100vh;
+    /* width: 100vw; */
+}
+
+.img-accsent {
+    position: absolute;
+    bottom: 0px;
+    /* width: 50%; */
+    height: 100%;
+    left: 10px;
+    z-index: 2;
+}
+
+.img-hero {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    /* width: 50%; */
+    height: 100%;
+    z-index: 2;
+}
+
+.headwords {
+    z-index: 3;
+    color: white;
+    font-size: 32px;
+    line-height: 100px;
+    position: absolute;
+    top: 203px;
+}
+
+.headwords b {
+    margin: 0px 15px;
+}
+
+.headwords p {
+    line-height: 35px;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.find-home {
+    background-color:#2691D9;
+    width: 182px;
+    height: 65px;
+    font-size: 22px;
+    margin-top: 20px;
+    position: relative;
+    transition: .3s;
+    
+}
+
+.find-home::after {
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    left: 120%;
+    border-style: solid;
+    box-sizing: border-box;
+    border-color: white;
+    border-width: 4px 4px 0px 0px;
+    border-radius: 4px;
+    transform: rotate(45deg);
+    /* transition: border-width 150ms ease-in-out; */
+    transition: .3s;
+}
+
+.find-home:hover::after {
+    border-top-width: 5px;
+    border-right-width: 5px;
+    left: 125%
+}
+
+.find-home:hover {
+    background-color: #0D4C76;
+    color: white;
+    box-shadow: black 2px;
+}
+
+
+/* --------------------------------------end of banner------------------------------------- */
+
+
+/* --------------------------------------gallery ------------------------------------- */
+
+.gallery .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.gallery .box-container .box {
+    overflow: hidden;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+    border: 1rem solid #fff;
+    border-radius: .5rem;
+    flex: 1 1 30rem;
+    height: 25rem;
+    position: relative;
+}
+
+.gallery .box-container .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.gallery .box-container .box .content {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, .7);
+    padding: 2rem;
+    padding-top: 5rem;
+}
+
+.gallery .box-container .box:hover .content {
+    top: 0;
+}
+
+.gallery .box-container .box .content h3 {
+    font-size: 2.5rem;
+    color: var(--orange);
+}
+
+.gallery .box-container .box .content p {
+    font-size: 1.5rem;
+    color: #eee;
+    padding: .5rem 0;
+}
+
+
+/* -------------------------------------- end of gallery ------------------------------------- */
+
+
+/*  Start Our Service */
+
+.Our-Service {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+
+}
+
+.special-heading {
+    color:#2691D9;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 72px;
+    text-align: center;
+}
+
+.spn {
+    color: rgba(38, 145, 217, 1);
+}
+
+.special-heading+p {
+    text-align: center;
+    color: #000000;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.Service-contant {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+
+/* Start Card Two And Three */
+
+.cardss {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1 1 1/20%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    margin-bottom: 40px;
+    text-align: center;
+    transition: .7s ease;
+    
+}
+
+.cardss:hover {
+    transform: scale(1.05);
+    background: linear-gradient(124.1deg, #2691D9 0%, #000000 115.96%);
+}
+
+.cardss:hover .info p {
+    color: white;
+}
+
+.cardss .images img {
+    background: #2691D9;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+}
+
+.info p {
+    color: #000000;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 30px;
+    transition: .2s;
+}
+
+.info .heading {
+    color: #2691D9;
+    margin: 15px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+
+/* End Card Two And Three */
+
+
+/*  End Our Service */
+
+
+/* ----------------------------------------------------start of findhome section----------------------------------------------------------------------------- */
+
+.main-home>div {
+    margin: 2vh 10vw;
+    padding: 3vw;
+    height: 80vh;
+    /* width: 100vw; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+
+.main-home {
+    background: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("./images/Img-search.webp");
+}
+
+.head-text {
+    /* background-color: red; */
+    width: 60vw;
+    height: 15vh;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 42px;
+    color: white;
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.head-text p {
+    font-weight: 100;
+    font-size: 28px;
+}
+
+.search-sec {
+    width: 70vw;
+    height: 18vh;
+    margin-top: 12vh;
+    display: none;
+}
+
+.search-nav {
+    width: 40%;
+    height: 35%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 10px 10px 0px 0px;
+    display: none;
+}
+
+.search-nav div {
+    width: 90%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 24px;
+    color: black;
+}
+
+.search-box {
+    background-color: blueviolet;
+    width: 100%;
+    height: 65%;
+    border-radius: 0px 0px 0px 10px;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+}
+
+.search-icon {
+    width: 40% !important;
+}
+
+.search-box div {
+    width: 100%;
+}
+
+
+/* ----------------------------------------------------end of findhome section -----------------------------------------------------------------------------*/
+
+
+/* ------------------------------------------------------start Our featured listing------------------------------------------------------------------------ */
+
+.Our-featured-listing {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.special-heading {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 72px;
+    text-align: center;
+    color: 2691D9;
+}
+
+.special-heading .heading {
+    color: #2691D9;
+}
+
+.cards .imagess {
+    Width: 100%;
+    height: 267px;
+    
+    background: no-repeat;
+    background-size: auto;
+    background-position: center;
+}
+
+.cards .images-1 {
+    background-image: url("./images/1.png");
+}
+
+.cards .images-2 {
+    background-image: url("./images//wallpaperflare.com_wallpaper\(5\).jpg");
+}
+
+.cards .images-3 {
+    background-image: url("./images//wallpaperflare.com_wallpaper\(4\).jpg");
+}
+
+.cards .images-4 {
+    background-image: url("./images//wallpaperflare.com_wallpaper\(3\).jpg");
+}
+
+.cards .images-5 {
+    background-image: url("./images//wallpaperflare.com_wallpaper\(2\).jpg");
+}
+
+.cards .images-6 {
+    background-image: url("./images//wallpaperflare.com_wallpaper\(1\).jpg");
+}
+
+.content .cards {
+    padding: 20px 0px 5px;
+    border-radius: 15px;
+    transition: 0.3s;
+    width: 390px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 25px rgba(1 1 1/20%);
+}
+
+.content .cards:hover {
+    transform: scale(0.9);
+    background: linear-gradient(142.62deg, #2691D9 0%, rgba(0, 11, 6, 0.92) 167.71%);
+}
+
+.content .cards:hover .one-head,
+.content .cards:hover .two-head {
+    color: white
+}
+
+.one-head {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+}
+
+.two-head {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: black;
+    padding-left: 24px;
+}
+
+.three-head {
+    display: flex;
+    position: static;
+    justify-content: space-around;
+    background-color: #ffffff;
+    margin-top: 30px;
+}
+
+.badrooms {
+    margin-left: -80px;
+}
+
+.featured-contant {
+    display: flex;
+    height: 100vh;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border-radius: 9px;
+    margin-top: 2vh;
+    gap: 20px;
+}
+
+.btn {
+    /* Parent */
+    width: 75px;
+    height: 33px;
+    background: #2691D9;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    margin-left: 5px;
+    transition: transform .3s;
+    /* Fonts */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    color: white !important;
+}
+
+
+/* ------------------------------------------------------end Our featured listing------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------start home footer------------------------------------------------------------------------ */
+.footer{
+    position: relative;
+    top: 130px;
+}
+.endphoto{
+    position: absolute;
+    background-size: cover;
+    width: 1519px;
+    position: absolute;
+}
+.logo-footer{
+    position: absolute;
+    top: 800px;
+    width: 100%;
+    height: 300px;
+    background-color: #000000;
+    
+}
+.img-logo-fotter{
+    position:relative ;
+    top: 120px;
+    left: 200px;
+}
+.footer-word{
+    position: relative;
+    font-size: 46px;
+    font-family: 'Poppins';
+    color: white;
+    padding: 10px;
+    display: inline-block;
+    min-width: 207px;
+    max-width: 487px;
+    text-decoration: solid;
+    top: 200px;
+    left: 124px;
+}
+.footer-word2{
+    position: relative;
+    font-size: 30px;
+    font-family: 'Poppins';
+    color: white;
+    padding: 10px;
+    display: inline-block;
+    min-width: 207px;
+    max-width: 487px;
+    text-decoration: solid;
+    top: 200px;
+    left: 124px;
+}
+.botton-in-footer{
+    position: absolute;
+    top: 130px;
+    left: 1200px;
+}
+.links-in-footer{
+    position: absolute;
+    top: 100px;
+    left: 400px;
+}
+.ask-q{
+    background-color: #FFFFFF;
+    width: 450px;
+    height: 350px;
+    position: relative;
+    top: -100px;
+    left: 1000px;
+    border-radius: 10px;
+}
+.ask{
+    color: #2691D9;
+    font-size: 50px;
+    font-family: 'Poppins';
+    text-align: center;
+    
+
+}
+.ask-box{
+    display: flex;
+    justify-items: center;
+    text-align: center;
+    height: 40px;
+    width: 300px;
+    background-color: #D9D9D9;
+    position: relative;
+    left: 70px;
+    top: 35px;
+    margin: 2px,10px;
+}
+.ask-btn{
+    position: relative;
+    width: 300px;
+    height: 40px;
+    left: 70px;
+    top: 55px;
+    border-radius: 0px;
+    color: #ffffff;
+    background-color: #2691D9;
+    font-family: 'Poppins';
+}
+.img-in-footer{
+    position: absolute;
+    top: 500px;
+    left: 150px;
+}
+.contact-footer{
+    position: absolute;
+    color: #fff;
+    left: 224px;
+    top: 504px;
+}

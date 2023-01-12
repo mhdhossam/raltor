@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{%static 'login/css/contact-us.css' %}">
+
+     <!-- Start Google Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;900&family=Josefin+Sans:wght@300&family=Open+Sans:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,400;0,600;0,800;1,200;1,300;1,400;1,500&display=swap"
+         rel="stylesheet">
+     <!--Ends Google Fonts -->
+     <!-- Start icon aosem -->
+     <link rel="icon" href="{%static 'login/images/icon.png' %}">
+     <link rel="stylesheet" href="{%static 'login/fontawesome-free-6.2.0-web/css/all.css' %}">
+     <!-- End icon aosem -->
+
+    <!-- Start icon aosem -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <!-- End icon aosem -->
+
+
+</head>
+
+<body>
+
+<div>
+    <!--------------------------------------------------start nav bar ------------------------------------------>
+    <div class="body">
+        <div class="head">
+            <div class="header content">
+                <div class="logo ">
+                    <div class="logo-icon">
+                        <a href="{%url 'users:home' %}"><img src="{%static 'login/images/logo.png' %}" alt=""></a>
+                    </div>
+                    <h3></h3>
+                </div>
+                <div class="links">
+                    <ul class="pos">
+                        <li class="activated">
+                            <a href="{%url 'users:home' %}">Home</a>
+                        </li>
+                        <li>
+                            <a href="{%url 'users:home' %}">Services</a>
+                        </li>
+                        <li>
+                            <a href="{%url 'users:addproduct' %}">upload</a>
+                        </li>
+                        <li>
+                            <a href="{%url 'users:contactus' %}">ContactUS</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sign-btns">
+                    <div class="sign-in ogbtn">
+                        <a href="{%url 'users:login' %}">sign in</a> </div>
+                    <div class="sign-up ogbtn">
+                        <a href="{%url 'users:signup' %}">sign-up</a> </div>
+                </div>
+            </div>
+        </div>
+        <!-------------------------------------------------- end of nav bar  ----------------------------------->
+
+    <!-- Start Contact-us -->
+    <section class="contact-us">
+        <div class="container">
+            <div class="feat-contact-us">
+                <div class="card">
+                    <div class="text">
+                        <p>contact us</p>
+                    </div><form method="POST">
+                    <div class="forms">
+                        <input type="text" placeholder="Name" style="    margin-bottom: 15px;"><br>
+                        <input type="text" placeholder="PhoneNumber" style="    margin-bottom: 15px;"><br>
+                        <input type="text" placeholder="Email" style="    margin-bottom: 15px;"><br>
+                        <textarea placeholder="message:" name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+                </form>
+                    <div class="btnn">Send</div>
+                    <div class="btnn-2"><a href="{%url 'users:chatuser' %}">Chat us</a></div>
+                </div>
+                <div class="street-icon">
+                    <div class="icons">
+                        <i class="fa-sharp fa-solid fa-house"></i> Ninety Street in the Fifth Settlement
+                        <br>
+                        <i class="fa-solid fa-phone-volume"></i> 010XXXXXXXX-022XXXXXXX
+                        <br>
+                        <i class="fa-sharp fa-solid fa-message"></i> Realtor_home@gmaill.com
+                        <br>
+                        <i class="fa-regular fa-clock"></i> 9Am-10Pm
+                    </div>
+                    <div class="image-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3449.062690862224!2d31.225289285182264!3d30.178203119196933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14586b0c6babc127%3A0xa1315c69c4f031da!2z2YXYs9iq2LTZgdmJINmC2YTZitmI2Kgg2KfZhNiq2K7Ytdi12Yo!5e0!3m2!1sar!2seg!4v1669482003268!5m2!1sar!2seg" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                        
+                    <div class="social-icons">
+                        <div class="iconsss">
+                            <a href="https://www.facebook.com/realtor.com"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://twitter.com/realtordotcom?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa-brands fa-twitter"></i></a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Contact Us -->
+</div>
+</body>
+
+</html>

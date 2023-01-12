@@ -1,0 +1,324 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    font-style: normal;
+    /* height: 300vh; */
+    Font-family: Poppins;
+    background-color: #CBE9FE;
+}
+
+ /* ----------------------------------------start nav bar-------------------------------------------- */ 
+ * {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    font-style: normal;
+    /* height: 300vh; */
+    Font-family: Poppins;
+    background-color: #CBE9FE;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.content {
+    margin: 0 10vw;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+li {
+    margin: 0 41px;
+}
+
+.ogbtn {
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: auto;
+    display: flex;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+}
+ .pos{  
+    margin: 10px;
+    
+}
+.links{
+    margin: 10px;
+    padding: 10px;
+}
+.activated>a {
+    font-weight: 700 !important;
+}
+
+.links ul li a {
+    position: relative;
+    font-size: 21px;
+    font-weight: 200;
+}
+
+.logo h3 {
+    margin-left: 1rem;
+}
+
+.links ul li a::after {
+    content: ' ';
+    background-color: #2691D9;
+    position: absolute;
+    width: 0;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    display: block;
+    bottom: -7px;
+    height: 2px;
+    left: 50%;
+}
+
+.links ul li a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.head {
+    z-index: 100;
+    position: fixed;
+    width: 100vw;
+    background-color: #2691D9;
+}
+
+.header {
+    margin-top: 15px;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    width: 30%;
+}
+
+.sign-btns {
+    display: flex;
+    width: 300px;
+    gap: 6px;
+}
+
+.sign-up {
+    background: white;
+    width: 133px;
+    height: 40px;
+    transition: .5s;
+}
+
+.sign-up:hover {
+    background-color: #0D4C76;
+}
+
+.sign-up:hover a {
+    color: white;
+}
+
+.sign-up a {
+    color: #0D4C76;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.sign-in {
+    width: 133px;
+    height: 40px;
+    background: #0D4C76;
+    transition: 0.5s;
+}
+
+.sign-in:hover {
+    background-color: #9aa2a7;
+}
+
+.sign-in a {
+    color: #E7D3D3;
+    font-weight: lighter;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 24px;
+    transition: 1.5;
+}
+
+.sign-in:hover a {
+    color: white;
+}
+/* ----------------------------------------------------------------end nav bar ---------------------*/
+.contact-us {
+    position: relative;
+    top: 100px;
+    left: -300px;
+    border-radius: 20px;
+}
+
+.container .feat-contact-us {
+    position: absolute;
+    width: 1294px;
+    height: 570px;
+    background-color: #ffffff;
+    left: 400px;
+    border-radius: 20px;
+}
+
+.card .text p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 78px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #2691D9;
+    margin-bottom: 80px;
+    position: absolute;
+    left: 230px;
+    top: 70px;
+}
+
+input[type=text] {
+    width: 528px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid rgb(0, 0, 0, 0.5);
+}
+
+textarea {
+    width: 528px;
+    height: 63px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid rgb(0, 0, 0, 0.5);
+}
+
+.forms {
+    position: absolute;
+    left: 120px;
+    top: 209px;
+}
+
+.btnn {
+    /*  Positions */
+    position: absolute;
+    width: 171px;
+    height: 48px;
+    border-radius: 47px;
+    left: 200px;
+    margin-top: 40px;
+    top: 388px;
+    background: #2691D9;
+    transition: 0.7s ease;
+    /* Fonts */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 48px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.btnn-2 {
+    /*  Positions */
+    position: absolute;
+    width: 171px;
+    height: 48px;
+    border-radius: 47px;
+    left: 400px;
+    margin-top: 40px;
+    top: 388px;
+    background: #2691D9;
+    transition: 0.7s ease;
+    /* Fonts */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 48px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.btnn-2:hover {
+    transform: scale(1.1);
+}
+
+.btnn:hover {
+    transform: scale(1.1);
+}
+
+.street-icon {
+    position: absolute;
+    width: 550px;
+    height: 568px;
+    left: 745px;
+    top: 2px;
+    background: linear-gradient(160.14deg, #2691D9 0%, #000000 188.7%);
+    border-radius: 0px 10px 10px 0px;
+}
+
+.street-icon .icons {
+    position: absolute;
+    left: 99px;
+    top: 70px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 36px;
+    color: #FFFFFF;
+}
+
+.street-icon .icons i {
+    font-size: 30px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+
+.street-icon .image-map iframe {
+    position: relative;
+    width: 415px;
+    top: 271px;
+    left: 59px;
+}
+
+.street-icon .social-icons {
+    position: absolute;
+    display: flex;
+    top: 476px;
+    left: 200px;
+}
+
+.social-icons .iconsss i {
+    color: #ffffff;
+    font-size: 20px;
+    margin-left: 10px;
+    padding-left: 15px;
+}
+
+
+/*----------------------------------------------------------------- End Contact Us ---------------------------------------------------------------------*/

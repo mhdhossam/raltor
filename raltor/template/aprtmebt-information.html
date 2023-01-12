@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    {%load static%}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House</title>
+    <link rel="stylesheet" href="{%static 'css/aprtment-informaton.css' %}">
+    <link rel="icon" href="{%static 'images/icon.png' %}" />
+ 
+</head>
+<body>
+    <div class="header">
+        <div class="header-head">
+            <div class="header-logo"><a href="./home.html"><img src="{%static 'images/RealtorLogo.png' %}" alt=""></a></div>
+            <div class="header-links">
+                <a href="./home.html" class="Home-link">HOME</a>
+                <a href="./home.html">SERVICES</a>
+                <a href="{%url 'users:addproduct' %}">UPload</a>
+                <a href="{%url 'users:contactus' %}">CONTACT US</a>
+            </div>
+            <div class="register">
+                <a href="{%url 'users:login' %}" class="sign-in">SIGN IN</a>
+                <a href="{%url 'users:signup' %}" class="sign-up">SIGN UP</a>
+            </div>
+        </div>
+        <div class="header-content">
+            <div class="header-content-img"><div class="img-big"><img class="img-big" src="{%static 'images/bed.png' %}" alt=""></div></div>
+            <div class="header-content-cont">
+                <div class="details">
+                    <P>{{rs3.price}}EGP</P>
+                    <p>{{rs3.size}} SQM</p>
+                    <p>{{rs3.location}}</p>
+                </div>
+                <div class="owner">
+                    <div class="owner-cont">
+                        <div class="owner-img"><img class="owner-img" src="{%static 'images/owner.png' %}" alt=""></div>
+                        <div class="owner-name">{{user_name}}</div>
+                    </div>
+                    <a href="" class="chat">Chat with seller</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-imgs">
+            <img class="im" src="{%static 'images/image.png' %}" alt="">
+            <img class="im" src="{%static 'images/image2.png' %}" alt="">
+            <img class="im" src="{%static 'images/image3.png' %}" alt="">
+            <img class="im" src="{%static 'images/image2.png' %}" alt="">
+            <img class="im" src="{%static 'images/image2.png' %}" alt="">
+            <img class="im" src="{%static 'images/image3.png' %}" alt="">
+            <img class="im" src="{%static 'images/image2.png' %}" alt="">
+            <div class="header-google-map" id="googleMap"></div>
+        </div>
+    </header>
+      <div class="bordar" style="width: 90%;">
+        <div class="pay"><a href=""><button class="button-19" role="button">buy Now</button></a></div>
+        <table>
+            <caption class = "table_title">Details</caption>
+            
+                <tr><td class="type">Type</td>                       <td class="c2">{{rs3.product_type}}</td>  <td class="type">Compound</td>         <td class="c2">{{rs3.location}}</td> </tr>
+                <tr> <td class="type">Price</td>                     <td class="c2">{{rs3.price}}</td>        <td class="type">Price Type</td>       <td class="c2">{{rs3.price}}Cash</td> </tr>
+                <tr> <td class="type">Area</td>                      <td class="c2">{{rs3.size}}M</td>              <td class="type">Bedrooms</td>         <td class="c2">{{rs3.num_of_bedrooms}}</td> </tr>
+                <tr> <td class="type">Bathrooms</td>                 <td class="c2">{{rs3.num_of_bathrooms}}</td>                 <td class="type">Furnished</td>        <td class="c2">Yes</td> </tr>
+                <tr> <td class="type">Payment Option</td>            <td class="c2">Cash</td>              <td class="type">Delivery Term</td>    <td class="c2">Finished</td> </tr>
+                <tr> <td class="type">Video</td>                     <td class="c2">Not Available</td>     <td class="type">Virtual Tour</td>     <td class="c2">Not Available</td> </tr>
+                
+        </table>
+    
+        <hr class="hr1">
+    
+        <h2 class="des">Description</h2>
+        <P class="des_p">{{rs3.about}}</P>
+        <h3 class="summary">summary</h3>
+        <ul class="ul1">
+            <li>Main Location: {{rs3.location}} third row from the beach.</li>
+            <li>Built Up Area: {{rs3.size}}M.</li>
+            <li>Land area: 493 m.</li>
+            <li>{{rs3.num_of_bedrooms}} Master Bedrooms.</li>
+            <li>Nannys room with private bathroom.</li>
+        </ul>
+        <p class="ul1_p">Fully furnished</p>
+    
+        <h3 class="f">Finance</h3>
+        <p class="f_p">price: {{rs3.price}} EGP</p>
+    
+        <h3 class="A">Amenities in the compound</h3>
+        <ul class="ul2">
+            <li>Full-service beach.</li>
+            <li>Beach chalets.</li>
+            <li>Clubhouse.</li>
+            <li>Restaurants.</li>
+            <li>Indoor and outdoor gyms.</li>
+        </ul>
+    
+        <hr class="hr2">
+    
+        <h3 class="l">Luxuries</h3>
+        <table class="table2">
+            <tr> <td class="t2">balcony</td> <td class="t2">Kitchen appliances</td> <td class="t2">Private garden</td> <td class="t2">security</td> </tr>
+            <tr> <td class="t2">Sea Sees</td> <td class="t2">Electricity Meter</td> <td class="t2">Water Meter</td> <td class="t2">Swimming pool</td> </tr>
+        </table>
+    </div>
+{% comment %}     
+    <div class="related-ads-title">
+        <span>Related ads</span>
+    </div>
+    <div class="related-ads">
+        
+        <div class="ad-card selected">
+            <a href="./aprtmebt-information.html"><img class="card-img" src="{%static 'images/wallpaperflare.com_wallpaper(2).jpg' %}" alt=""></a>
+            <div class="info1">
+                <span class="title">90s madinty</span>
+                <span>18,500,000</span>
+            </div>
+            <div class="street-name">Street90</div>
+            <ul>
+                <li>8 Bedrooms</li>
+                <li>4 Bathroom</li>
+                <li>1000m Area</li>
+            </ul>
+        </div>
+        <div class="ad-card selected">
+            <a href="./aprtmebt-information.html"><img class="card-img" src="{%static 'images/1.png' %}" alt=""></a>
+            <div class="info1">
+                <span class="title">13 hassan Elmaamoon</span>
+                <span>850,000</span>
+            </div>
+            <div class="street-name">Street13</div>
+            <ul>
+                <li>3 Bedrooms</li>
+                <li>1 Bathroom</li>
+                <li>500m Area</li>
+            </ul>
+        </div>
+        <div class="ad-card selected">
+            <a href="./aprtmebt-information.html"><img class="card-img" src="{%static 'images/House.png' %}" alt=""></a>
+            <div class="info1">
+                <span class="title">cairo government</span>
+                <span>10,000,00</span>
+            </div>
+            <div class="street-name">Street elsuze</div>
+            <ul>
+                <li>5 Bedrooms</li>
+                <li>4 Bathroom</li>
+                <li>1500m Area</li>
+            </ul>
+        </div>
+        <div class="ad-card selected">
+            <a href="./aprtmebt-information.html"> <img class="card-img" src="{%static 'images/5.jpg' %}" alt=""></a>
+            <div class="info1">
+                <span class="title">Elshike zaied</span>
+                <span>3,000.000</span>
+            </div>
+            <div class="street-name">Street Arkan</div>
+            <ul>
+                <li>3 Bedrooms</li>
+                <li>4 Bathroom</li>
+                <li>760m Area</li>
+            </ul>
+        </div>
+    </div> {% endcomment %}
+
+    <script>
+        function myMap() {
+        var mapProp= {
+          center:new google.maps.LatLng(51.508742,-0.120850),
+          zoom:10,
+        };
+        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        }
+        </script>
+        
+        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+</body>
+</html>
